@@ -1,14 +1,21 @@
-import { NavLink } from "react-router";
+import { Navigate, NavLink } from "react-router-dom";
 import "./auth.css";
+import { useAuth } from '../Context/AuthContext';
 
 const LoginForm = () => {
+  const { isLoggedIn, handleLogin } = useAuth();
+
+  if(isLoggedIn){
+    return <Navigate to={"/"} replace />
+  }
+
 	return (
 		<div className='auth-section'>
 			<div className="login">
 				<h2>Sign in</h2>
 				<p>Enter your email below to login to your account</p>
 
-				<form>
+				<form onSubmit={handleLogin}>
 					<div className="input-control">
 						<label htmlFor="email">Email</label>
 						<input type="email" name="email" placeholder="John@example.com" />
