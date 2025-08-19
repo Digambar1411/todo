@@ -1,7 +1,12 @@
+.auth-section{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 .login, .signup{
   width: 350px;
-  margin: 0rem auto;
   border: 1px solid #cac8c8;
   padding: 2rem 1rem;
   border-radius: 15px;
