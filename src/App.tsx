@@ -1,8 +1,9 @@
 import './App.css'
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoginForm from "./Pages/LoginForm";
+import NotFound from './Pages/NotFound';
 import SignupForm from "./Pages/Signup";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 							</ProtectedRoute>
 						}
 					/>
+          <Route path="*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 	);
