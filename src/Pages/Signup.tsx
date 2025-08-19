@@ -5,8 +5,8 @@ const SignupForm = () => {
 	return (
 		<div className="auth-section">
 			<div className="signup">
-				<h2>Sign up</h2>
-				<p>Enter your information to create an account</p>
+				<h2 className='heading'>Sign up</h2>
+				<p className='desc'>Enter your information to create an account</p>
 
 				<form>
 					<div className="grid-2">
@@ -37,7 +37,7 @@ const SignupForm = () => {
 						/>
 					</div>
 
-					<button className="btn form-btn">Create Account</button>
+					<button className="btn form-btn mt-1">Create Account</button>
 
 					<p>
 						Already have an account? <NavLink to="/signin">Sign in</NavLink>{" "}

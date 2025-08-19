@@ -12,6 +12,14 @@
   border-radius: 15px;
 }
 
+label,.heading{
+  color: #242424;
+}
+
+.heading{
+  font-weight: 600;
+}
+
 input{
   width: 100%;
   padding: 0.5rem;
@@ -34,10 +42,13 @@ input{
   background-color: #fff;
 }
 
+.mt-1{
+  margin-top: 1rem;
+}
 .toggle-btn{
   margin-top: 0.25rem;
   margin-left: 5px;
-  padding: 0 10px;
+  padding: 0 6px;
   height: 2rem;
   display: flex;
   border: 1px solid #cac8c8;
@@ -45,6 +56,7 @@ input{
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .toggle-btn:hover, .google-btn:hover{
@@ -76,4 +88,14 @@ input{
 
 a{
   color:#191919
+}
+
+.error{
+  margin-top: 0;
+  color: #dd1313;
+  font-size: 14px;
+}
+
+.desc{
+  color: #4d4c4c;
 }

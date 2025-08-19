@@ -1,8 +1,8 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type Dispatch, type ReactNode, type SetStateAction } from "react";
 
 type authContextType = {
   isLoggedIn: boolean;
-  handleLogin: (e:React.FormEvent<HTMLFormElement>) => void;
+  setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
 };
 
 const AuthContext = createContext<authContextType | undefined>(undefined);
@@ -18,12 +18,7 @@ const useAuth = () => {
 const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  const handleLogin = (event: React.FormEvent<HTMLFormElement>)=>{
-    event.preventDefault();
-    setIsLoggedIn(true);
-  }
-
-	return <AuthContext.Provider value={{isLoggedIn, handleLogin}}>
+  return <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
     {children}
   </AuthContext.Provider>;
 };
